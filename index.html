@@ -379,13 +379,16 @@ nav {
 .hero-wa-dot { width:6px; height:6px; border-radius:50%; background:rgba(26,107,58,0.22); transition:all .25s; }
 .hero-wa-dot.active { background:var(--saffron); width:18px; border-radius:8px; }
 @media(min-width:921px){
-  .hero-right { padding-right:145px; }
+  .hero-right { padding-right:168px; }
+  .hero-photo-card { margin-left:-34px; }
+  .hero-wa-mockup { right:-148px; bottom:36px; }
 }
 @media(max-width:1100px) and (min-width:921px){
-  .hero-grid { gap:2.4rem; }
-  .hero-wa-mockup { right:-125px; width:195px; }
+  .hero-grid { gap:2.2rem; }
+  .hero-photo-card { margin-left:-18px; }
+  .hero-wa-mockup { right:-108px; width:192px; bottom:34px; }
   .hero-wa-screen { min-height:305px; }
-  .hero-right { padding-right:90px; }
+  .hero-right { padding-right:96px; }
 }
 @media(max-width:920px){
   .hero-right { order:-1; min-height:auto; justify-content:center; padding:0 0 2.4rem; }
@@ -415,46 +418,27 @@ nav {
 
 /* ── EMOTION BANNER ── */
 .emotion-banner {
-  padding:3.2rem 2rem; position:relative;
+  padding:4.5rem 2rem; text-align:center; position:relative;
   background:
-    radial-gradient(ellipse 620px 260px at 28% 50%, rgba(26,107,58,0.08), transparent),
-    radial-gradient(ellipse 620px 260px at 82% 50%, rgba(255,107,0,0.08), transparent),
+    radial-gradient(ellipse 700px 320px at 50% 0%, rgba(255,107,0,0.08), transparent),
     white;
 }
-.emo-inner {
-  max-width:1100px; margin:0 auto;
-  display:grid; grid-template-columns:1.08fr 0.92fr; gap:2rem; align-items:stretch;
-}
-.emo-quote-card, .emo-pills-card {
-  border:1.6px solid rgba(26,107,58,0.18); border-radius:26px;
-  box-shadow:0 14px 42px rgba(26,107,58,0.08);
-  min-height:260px;
-}
-.emo-quote-card {
-  background:rgba(255,255,255,0.78); padding:2.2rem 2.4rem;
-  border-left:7px solid var(--saffron); display:flex; flex-direction:column; justify-content:center;
-}
-.emo-pills-card {
-  background:linear-gradient(140deg, rgba(221,243,228,0.72), rgba(255,241,226,0.62));
-  padding:1.8rem; display:flex; flex-direction:column; justify-content:center; gap:0.9rem;
-}
-.emo-quote-mark { font-family:'Playfair Display',serif; font-size:4.2rem; line-height:0.35; color:var(--saffron); opacity:0.35; margin-bottom:0.5rem; }
+.emo-quote-mark { font-family:'Playfair Display',serif; font-size:5rem; line-height:0.6; color:var(--saffron); opacity:0.35; }
 .emotion-banner h2 {
   font-family:'Playfair Display',serif; font-weight:900;
-  font-size:clamp(1.65rem, 2.8vw, 2.5rem); color:var(--dark); line-height:1.34;
-  max-width:720px; margin:0 0 0.75rem;
+  font-size:clamp(1.5rem, 3.2vw, 2.5rem); color:var(--dark); line-height:1.4;
+  max-width:850px; margin:1rem auto 0.8rem;
 }
 .emotion-banner h2 .acc { color:var(--saffron); }
-.emo-sub { font-size:0.95rem; opacity:0.62; font-weight:400; max-width:600px; margin:0; }
-.emo-pills-title { font-size:0.8rem; font-weight:900; color:var(--saffron-deep); letter-spacing:0.8px; text-transform:uppercase; margin-bottom:0.15rem; }
-.emo-pills { display:grid; grid-template-columns:1fr; gap:0.85rem; }
+.emo-sub { font-size:0.95rem; opacity:0.55; font-weight:300; max-width:600px; margin:0 auto 2.2rem; }
+.emo-pills { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
 .emo-pill {
-  background:rgba(255,255,255,0.92); border:1.6px solid rgba(26,107,58,0.22);
-  border-radius:18px; padding:14px 18px;
-  font-size:1rem; font-weight:800; color:var(--green-deep);
-  display:flex; align-items:center; gap:10px; min-height:56px;
+  background:var(--green-pale); border:1.5px solid rgba(26,107,58,0.25);
+  border-radius:100px; padding:12px 28px;
+  font-size:1.05rem; font-weight:700; color:var(--green-deep);
+  display:flex; align-items:center; gap:8px;
 }
-.emo-pill.sf { background:rgba(255,241,226,0.95); border-color:rgba(255,107,0,0.32); color:var(--saffron-deep); }
+.emo-pill.sf { background:var(--saffron-pale); border-color:rgba(255,107,0,0.3); color:var(--saffron-deep); }
 
 /* ── SECTION COMMON ── */
 .section-eyebrow {
@@ -696,20 +680,6 @@ footer { padding:3.2rem 2rem 1.6rem; background:var(--dark); color:rgba(255,255,
 .footer-bottom { border-top:1px solid rgba(255,255,255,0.1); padding-top:1.4rem; text-align:center; font-size:12px; opacity:0.45; max-width:1100px; margin:0 auto; }
 
 
-@media(max-width:920px){
-  .emo-inner { grid-template-columns:1fr; gap:1.2rem; }
-  .emo-quote-card, .emo-pills-card { min-height:auto; }
-  .emo-quote-card { padding:1.8rem 1.6rem; }
-  .emo-pills-card { padding:1.4rem; }
-}
-@media(max-width:560px){
-  .emotion-banner { padding:2.2rem 1.1rem; }
-  .emo-quote-card { padding:1.55rem 1.25rem; border-left-width:5px; }
-  .emo-quote-mark { font-size:3.4rem; }
-  .emotion-banner h2 { font-size:1.55rem; line-height:1.35; }
-  .emo-pill { font-size:0.92rem; padding:12px 14px; min-height:52px; }
-}
-
 /* ── PHONE MOCKUP ── */
 .phone-frame { width:270px; background:#1a1a1a; border-radius:38px; padding:11px; box-shadow:0 24px 56px rgba(0,0,0,0.3); }
 .phone-screen { background:#ece5dd; border-radius:28px; overflow:hidden; min-height:440px; position:relative; display:flex; flex-direction:column; }
@@ -855,51 +825,50 @@ footer { padding:3.2rem 2rem 1.6rem; background:var(--dark); color:rgba(255,255,
 }
 
 
-
-/* ── FINAL FIX: QR card height matches two CTA buttons, QR stays scannable ── */
-@media(min-width:721px){
-  .hero-action-wrap{
-    grid-template-columns:minmax(260px, 310px) minmax(360px, 420px) !important;
-    align-items:stretch !important;
-    gap:1.05rem !important;
+/* FINAL MOBILE FIX: keep leader name visible below photo */
+@media (max-width: 920px) {
+  .hero-right {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 2.4rem;
   }
-  .hero-action-wrap .hero-cta{
-    gap:0.75rem !important;
+  .hero-photo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(360px, 100%);
+    margin-left: 0 !important;
   }
-  .hero-action-wrap .hero-cta a{
-    min-height:58px !important;
-    padding:0.8rem 1.1rem !important;
+  .hero-name-plate {
+    position: static !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin-top: 14px;
+    width: min(88%, 320px);
+    max-width: calc(100% - 18px);
+    z-index: 7;
   }
-  .hero-qr-panel{
-    min-height:128px !important;
-    height:128px !important;
-    padding:0.72rem 0.9rem !important;
-    grid-template-columns:minmax(0,1fr) 112px !important;
-    align-self:stretch !important;
-    border-radius:16px !important;
+  .hero-name-plate .nm {
+    white-space: normal;
+    line-height: 1.18;
   }
-  .hero-qr-img{
-    width:112px !important;
-    height:112px !important;
-    border-radius:12px !important;
+  .hero-wa-mockup {
+    position: relative;
+    right: auto !important;
+    bottom: auto !important;
+    margin: 1.2rem auto 0;
   }
-  .hero-qr-title{ font-size:0.92rem !important; }
-  .hero-qr-num{ font-size:0.78rem !important; }
-  .hero-qr-note{ font-size:0.70rem !important; line-height:1.25 !important; }
-  .hero-qr-kicker{ font-size:0.66rem !important; }
 }
-
-/* Real QR image for green connect section */
-.qr-panel img.qr-panel-img{
-  width:128px;
-  height:128px;
-  display:block;
-  background:#fff;
-  border-radius:12px;
-  image-rendering:pixelated;
-}
-@media(max-width:600px){
-  .qr-panel img.qr-panel-img{ width:96px; height:96px; }
+@media (max-width: 560px) {
+  .hero-name-plate {
+    padding: 12px 18px;
+    border-radius: 16px;
+  }
+  .hero-name-plate .nm {
+    font-size: 0.98rem;
+  }
 }
 
 </style>
@@ -989,9 +958,9 @@ footer { padding:3.2rem 2rem 1.6rem; background:var(--dark); color:rgba(255,255,
       <div class="hero-wa-slide">
         <div class="hero-bubble in"><span class="or">ଦୟାକରି ଗ୍ରାମ ପଞ୍ଚାୟତ ବାଛନ୍ତୁ</span><span class="en">Please select your Gram Panchayat</span></div>
         <div class="hero-wa-options">
-          <div class="hero-wa-chip"><span class="or">ବାଙ୍କୀ</span><span class="en">Banki</span></div>
-          <div class="hero-wa-chip"><span class="or">ଡମପଡ଼ା</span><span class="en">Domopara</span></div>
-          <div class="hero-wa-chip"><span class="or">ତାଳବସ୍ତ</span><span class="en">Talabasta</span></div>
+          <div class="hero-wa-chip">Banki</div>
+          <div class="hero-wa-chip">Dulanapur</div>
+          <div class="hero-wa-chip">Talabasta</div>
         </div>
       </div>
       <div class="hero-wa-slide">
@@ -1038,27 +1007,20 @@ footer { padding:3.2rem 2rem 1.6rem; background:var(--dark); color:rgba(255,255,
 </div>
 <!-- EMOTION BANNER -->
 <section class="emotion-banner">
-  <div class="emo-inner">
-    <div class="emo-quote-card">
-      <div class="emo-quote-mark">”</div>
-      <h2>
-        <span class="or">ବାଙ୍କୀ ଲୋକଙ୍କ ସହ <span class="acc">ଥିଲି</span>,<br/>ବାଙ୍କୀ ଲୋକଙ୍କ ସହ <span class="acc">ଅଛି</span>,<br/>ଆଉ ସବୁଦିନ ପାଇଁ <span class="acc">ରହିବି</span>।</span>
-        <span class="en">I <span class="acc">was</span> with the people of Banki,<br/>I <span class="acc">am</span> with the people of Banki,<br/>and I will <span class="acc">remain</span> — forever.</span>
-      </h2>
-      <p class="emo-sub">
-        <span class="or">— ଶୁଭ୍ରାଂଶୁ ମୋହନ ପାଢ଼ୀ</span>
-        <span class="en">— Subhransu Mohan Padhi</span>
-      </p>
-    </div>
-    <div class="emo-pills-card">
-      <div class="emo-pills-title"><span class="or">ଆମ ପ୍ରତିଶ୍ରୁତି</span><span class="en">Our Promise</span></div>
-      <div class="emo-pills">
-        <div class="emo-pill">🤝 <span class="or">ଆପଣଙ୍କ ସ୍ୱର, ଆମ ଦାୟିତ୍ୱ</span><span class="en">Your voice, our responsibility</span></div>
-        <div class="emo-pill sf">📢 <span class="or">ପ୍ରତ୍ୟେକ ଅଭିଯୋଗର ଉତ୍ତର ମିଳିବ</span><span class="en">Every complaint gets an answer</span></div>
-        <div class="emo-pill">🌾 <span class="or">ଗାଁ ର ବିକାଶ, ସମସ୍ତଙ୍କ ବିକାଶ</span><span class="en">Village progress is everyone's progress</span></div>
-      </div>
-    </div>
-  </div>
+<div class="emo-quote-mark">"</div>
+<h2>
+<span class="or">ବାଙ୍କୀ ଲୋକଙ୍କ ସହ <span class="acc">ଥିଲି</span>,<br/>ବାଙ୍କୀ ଲୋକଙ୍କ ସହ <span class="acc">ଅଛି</span>,<br/>ଆଉ ସବୁଦିନ ପାଇଁ <span class="acc">ରହିବି</span>।</span>
+<span class="en">I <span class="acc">was</span> with the people of Banki,<br/>I <span class="acc">am</span> with the people of Banki,<br/>and I will <span class="acc">remain</span> — forever.</span>
+</h2>
+<p class="emo-sub">
+<span class="or">— ଶୁଭ୍ରାଂଶୁ ମୋହନ ପାଢ଼ୀ</span>
+<span class="en">— Subhransu Mohan Padhi</span>
+</p>
+<div class="emo-pills">
+<div class="emo-pill">🤝 <span class="or">ଆପଣଙ୍କ ସ୍ୱର, ଆମ ଦାୟିତ୍ୱ</span><span class="en">Your voice, our responsibility</span></div>
+<div class="emo-pill sf">📢 <span class="or">ପ୍ରତ୍ୟେକ ଅଭିଯୋଗର ଉତ୍ତର ମିଳିବ</span><span class="en">Every complaint gets an answer</span></div>
+<div class="emo-pill">🌾 <span class="or">ଗାଁ ର ବିକାଶ, ସମସ୍ତଙ୍କ ବିକାଶ</span><span class="en">Village progress is everyone's progress</span></div>
+</div>
 </section>
 <!-- LEADER -->
 <section class="leader-section">
@@ -1136,7 +1098,205 @@ footer { padding:3.2rem 2rem 1.6rem; background:var(--dark); color:rgba(255,255,
 </div>
 <!-- QR PANEL — right side -->
 <div class="qr-panel">
-<img class="qr-panel-img" src="data:image/png;base64,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" alt="Scan QR to open GramSahay WhatsApp"/>
+<svg width="120" height="120" viewBox="0 0 33 33" xmlns="http://www.w3.org/2000/svg" style="background:white;padding:4px">
+<rect fill="white" width="33" height="33"/>
+<!-- Finder TL -->
+<rect fill="#1A6B3A" x="1" y="1" width="7" height="7"/>
+<rect fill="white" x="2" y="2" width="5" height="5"/>
+<rect fill="#1A6B3A" x="3" y="3" width="3" height="3"/>
+<!-- Finder TR -->
+<rect fill="#1A6B3A" x="25" y="1" width="7" height="7"/>
+<rect fill="white" x="26" y="2" width="5" height="5"/>
+<rect fill="#1A6B3A" x="27" y="3" width="3" height="3"/>
+<!-- Finder BL -->
+<rect fill="#1A6B3A" x="1" y="25" width="7" height="7"/>
+<rect fill="white" x="2" y="26" width="5" height="5"/>
+<rect fill="#1A6B3A" x="3" y="27" width="3" height="3"/>
+<!-- Timing patterns -->
+<rect fill="#1A6B3A" x="8" y="6" width="1" height="1"/>
+<rect fill="#1A6B3A" x="10" y="6" width="1" height="1"/>
+<rect fill="#1A6B3A" x="12" y="6" width="1" height="1"/>
+<rect fill="#1A6B3A" x="14" y="6" width="1" height="1"/>
+<rect fill="#1A6B3A" x="16" y="6" width="1" height="1"/>
+<rect fill="#1A6B3A" x="18" y="6" width="1" height="1"/>
+<rect fill="#1A6B3A" x="20" y="6" width="1" height="1"/>
+<rect fill="#1A6B3A" x="22" y="6" width="1" height="1"/>
+<rect fill="#1A6B3A" x="6" y="8" width="1" height="1"/>
+<rect fill="#1A6B3A" x="6" y="10" width="1" height="1"/>
+<rect fill="#1A6B3A" x="6" y="12" width="1" height="1"/>
+<rect fill="#1A6B3A" x="6" y="14" width="1" height="1"/>
+<rect fill="#1A6B3A" x="6" y="16" width="1" height="1"/>
+<rect fill="#1A6B3A" x="6" y="18" width="1" height="1"/>
+<rect fill="#1A6B3A" x="6" y="20" width="1" height="1"/>
+<rect fill="#1A6B3A" x="6" y="22" width="1" height="1"/>
+<!-- Data modules (representative pattern for wa.me/918895804898?text=Hi) -->
+<rect fill="#1A6B3A" x="8" y="8" width="1" height="1"/>
+<rect fill="#1A6B3A" x="9" y="8" width="1" height="1"/>
+<rect fill="#1A6B3A" x="11" y="8" width="1" height="1"/>
+<rect fill="#1A6B3A" x="13" y="8" width="2" height="1"/>
+<rect fill="#1A6B3A" x="16" y="8" width="1" height="1"/>
+<rect fill="#1A6B3A" x="18" y="8" width="3" height="1"/>
+<rect fill="#1A6B3A" x="22" y="8" width="3" height="1"/>
+<rect fill="#1A6B3A" x="8" y="9" width="3" height="1"/>
+<rect fill="#1A6B3A" x="12" y="9" width="1" height="1"/>
+<rect fill="#1A6B3A" x="14" y="9" width="3" height="1"/>
+<rect fill="#1A6B3A" x="19" y="9" width="1" height="1"/>
+<rect fill="#1A6B3A" x="21" y="9" width="1" height="1"/>
+<rect fill="#1A6B3A" x="24" y="9" width="1" height="1"/>
+<rect fill="#1A6B3A" x="9" y="10" width="1" height="1"/>
+<rect fill="#1A6B3A" x="11" y="10" width="2" height="1"/>
+<rect fill="#1A6B3A" x="15" y="10" width="1" height="1"/>
+<rect fill="#1A6B3A" x="17" y="10" width="2" height="1"/>
+<rect fill="#1A6B3A" x="20" y="10" width="2" height="1"/>
+<rect fill="#1A6B3A" x="23" y="10" width="2" height="1"/>
+<rect fill="#1A6B3A" x="8" y="11" width="2" height="1"/>
+<rect fill="#1A6B3A" x="11" y="11" width="1" height="1"/>
+<rect fill="#1A6B3A" x="13" y="11" width="2" height="1"/>
+<rect fill="#1A6B3A" x="16" y="11" width="3" height="1"/>
+<rect fill="#1A6B3A" x="21" y="11" width="4" height="1"/>
+<rect fill="#1A6B3A" x="9" y="12" width="3" height="1"/>
+<rect fill="#1A6B3A" x="13" y="12" width="1" height="1"/>
+<rect fill="#1A6B3A" x="15" y="12" width="2" height="1"/>
+<rect fill="#1A6B3A" x="18" y="12" width="1" height="1"/>
+<rect fill="#1A6B3A" x="20" y="12" width="1" height="1"/>
+<rect fill="#1A6B3A" x="22" y="12" width="3" height="1"/>
+<rect fill="#1A6B3A" x="8" y="13" width="1" height="1"/>
+<rect fill="#1A6B3A" x="10" y="13" width="2" height="1"/>
+<rect fill="#1A6B3A" x="14" y="13" width="3" height="1"/>
+<rect fill="#1A6B3A" x="19" y="13" width="2" height="1"/>
+<rect fill="#1A6B3A" x="23" y="13" width="1" height="1"/>
+<rect fill="#1A6B3A" x="9" y="14" width="1" height="1"/>
+<rect fill="#1A6B3A" x="11" y="14" width="3" height="1"/>
+<rect fill="#1A6B3A" x="15" y="14" width="1" height="1"/>
+<rect fill="#1A6B3A" x="17" y="14" width="2" height="1"/>
+<rect fill="#1A6B3A" x="20" y="14" width="3" height="1"/>
+<rect fill="#1A6B3A" x="24" y="14" width="1" height="1"/>
+<rect fill="#1A6B3A" x="8" y="15" width="2" height="1"/>
+<rect fill="#1A6B3A" x="12" y="15" width="2" height="1"/>
+<rect fill="#1A6B3A" x="16" y="15" width="3" height="1"/>
+<rect fill="#1A6B3A" x="21" y="15" width="2" height="1"/>
+<rect fill="#1A6B3A" x="24" y="15" width="1" height="1"/>
+<rect fill="#1A6B3A" x="9" y="16" width="3" height="1"/>
+<rect fill="#1A6B3A" x="13" y="16" width="1" height="1"/>
+<rect fill="#1A6B3A" x="15" y="16" width="2" height="1"/>
+<rect fill="#1A6B3A" x="18" y="16" width="1" height="1"/>
+<rect fill="#1A6B3A" x="20" y="16" width="2" height="1"/>
+<rect fill="#1A6B3A" x="23" y="16" width="2" height="1"/>
+<rect fill="#1A6B3A" x="1" y="8" width="1" height="1"/>
+<rect fill="#1A6B3A" x="3" y="8" width="1" height="1"/>
+<rect fill="#1A6B3A" x="5" y="8" width="1" height="1"/>
+<rect fill="#1A6B3A" x="1" y="10" width="2" height="1"/>
+<rect fill="#1A6B3A" x="4" y="10" width="2" height="1"/>
+<rect fill="#1A6B3A" x="2" y="11" width="3" height="1"/>
+<rect fill="#1A6B3A" x="1" y="12" width="1" height="1"/>
+<rect fill="#1A6B3A" x="3" y="12" width="2" height="1"/>
+<rect fill="#1A6B3A" x="1" y="13" width="4" height="1"/>
+<rect fill="#1A6B3A" x="2" y="14" width="1" height="1"/>
+<rect fill="#1A6B3A" x="4" y="14" width="2" height="1"/>
+<rect fill="#1A6B3A" x="1" y="15" width="3" height="1"/>
+<rect fill="#1A6B3A" x="5" y="15" width="1" height="1"/>
+<rect fill="#1A6B3A" x="2" y="16" width="2" height="1"/>
+<rect fill="#1A6B3A" x="5" y="16" width="1" height="1"/>
+<rect fill="#1A6B3A" x="25" y="8" width="1" height="1"/>
+<rect fill="#1A6B3A" x="27" y="8" width="3" height="1"/>
+<rect fill="#1A6B3A" x="26" y="9" width="2" height="1"/>
+<rect fill="#1A6B3A" x="30" y="9" width="1" height="1"/>
+<rect fill="#1A6B3A" x="25" y="10" width="3" height="1"/>
+<rect fill="#1A6B3A" x="29" y="10" width="2" height="1"/>
+<rect fill="#1A6B3A" x="26" y="11" width="1" height="1"/>
+<rect fill="#1A6B3A" x="28" y="11" width="3" height="1"/>
+<rect fill="#1A6B3A" x="25" y="12" width="2" height="1"/>
+<rect fill="#1A6B3A" x="29" y="12" width="1" height="1"/>
+<rect fill="#1A6B3A" x="31" y="12" width="1" height="1"/>
+<rect fill="#1A6B3A" x="26" y="13" width="3" height="1"/>
+<rect fill="#1A6B3A" x="30" y="13" width="2" height="1"/>
+<rect fill="#1A6B3A" x="25" y="14" width="1" height="1"/>
+<rect fill="#1A6B3A" x="27" y="14" width="2" height="1"/>
+<rect fill="#1A6B3A" x="30" y="14" width="1" height="1"/>
+<rect fill="#1A6B3A" x="26" y="15" width="2" height="1"/>
+<rect fill="#1A6B3A" x="29" y="15" width="3" height="1"/>
+<rect fill="#1A6B3A" x="25" y="16" width="3" height="1"/>
+<rect fill="#1A6B3A" x="29" y="16" width="1" height="1"/>
+<rect fill="#1A6B3A" x="31" y="16" width="1" height="1"/>
+<rect fill="#1A6B3A" x="1" y="17" width="2" height="1"/>
+<rect fill="#1A6B3A" x="4" y="17" width="1" height="1"/>
+<rect fill="#1A6B3A" x="8" y="17" width="3" height="1"/>
+<rect fill="#1A6B3A" x="12" y="17" width="1" height="1"/>
+<rect fill="#1A6B3A" x="14" y="17" width="4" height="1"/>
+<rect fill="#1A6B3A" x="20" y="17" width="2" height="1"/>
+<rect fill="#1A6B3A" x="23" y="17" width="3" height="1"/>
+<rect fill="#1A6B3A" x="27" y="17" width="1" height="1"/>
+<rect fill="#1A6B3A" x="29" y="17" width="2" height="1"/>
+<rect fill="#1A6B3A" x="2" y="18" width="1" height="1"/>
+<rect fill="#1A6B3A" x="5" y="18" width="1" height="1"/>
+<rect fill="#1A6B3A" x="9" y="18" width="1" height="1"/>
+<rect fill="#1A6B3A" x="11" y="18" width="2" height="1"/>
+<rect fill="#1A6B3A" x="15" y="18" width="2" height="1"/>
+<rect fill="#1A6B3A" x="19" y="18" width="3" height="1"/>
+<rect fill="#1A6B3A" x="24" y="18" width="2" height="1"/>
+<rect fill="#1A6B3A" x="28" y="18" width="3" height="1"/>
+<rect fill="#1A6B3A" x="1" y="19" width="3" height="1"/>
+<rect fill="#1A6B3A" x="5" y="19" width="2" height="1"/>
+<rect fill="#1A6B3A" x="8" y="19" width="2" height="1"/>
+<rect fill="#1A6B3A" x="12" y="19" width="3" height="1"/>
+<rect fill="#1A6B3A" x="16" y="19" width="2" height="1"/>
+<rect fill="#1A6B3A" x="20" y="19" width="1" height="1"/>
+<rect fill="#1A6B3A" x="22" y="19" width="2" height="1"/>
+<rect fill="#1A6B3A" x="26" y="19" width="2" height="1"/>
+<rect fill="#1A6B3A" x="30" y="19" width="1" height="1"/>
+<rect fill="#1A6B3A" x="2" y="20" width="2" height="1"/>
+<rect fill="#1A6B3A" x="9" y="20" width="3" height="1"/>
+<rect fill="#1A6B3A" x="13" y="20" width="2" height="1"/>
+<rect fill="#1A6B3A" x="17" y="20" width="3" height="1"/>
+<rect fill="#1A6B3A" x="21" y="20" width="3" height="1"/>
+<rect fill="#1A6B3A" x="25" y="20" width="1" height="1"/>
+<rect fill="#1A6B3A" x="27" y="20" width="3" height="1"/>
+<rect fill="#1A6B3A" x="1" y="21" width="1" height="1"/>
+<rect fill="#1A6B3A" x="3" y="21" width="3" height="1"/>
+<rect fill="#1A6B3A" x="8" y="21" width="1" height="1"/>
+<rect fill="#1A6B3A" x="10" y="21" width="2" height="1"/>
+<rect fill="#1A6B3A" x="14" y="21" width="1" height="1"/>
+<rect fill="#1A6B3A" x="16" y="21" width="3" height="1"/>
+<rect fill="#1A6B3A" x="20" y="21" width="2" height="1"/>
+<rect fill="#1A6B3A" x="24" y="21" width="3" height="1"/>
+<rect fill="#1A6B3A" x="29" y="21" width="2" height="1"/>
+<rect fill="#1A6B3A" x="2" y="22" width="3" height="1"/>
+<rect fill="#1A6B3A" x="9" y="22" width="2" height="1"/>
+<rect fill="#1A6B3A" x="13" y="22" width="3" height="1"/>
+<rect fill="#1A6B3A" x="17" y="22" width="2" height="1"/>
+<rect fill="#1A6B3A" x="21" y="22" width="1" height="1"/>
+<rect fill="#1A6B3A" x="23" y="22" width="2" height="1"/>
+<rect fill="#1A6B3A" x="26" y="22" width="1" height="1"/>
+<rect fill="#1A6B3A" x="28" y="22" width="3" height="1"/>
+<rect fill="#1A6B3A" x="1" y="23" width="2" height="1"/>
+<rect fill="#1A6B3A" x="4" y="23" width="2" height="1"/>
+<rect fill="#1A6B3A" x="8" y="23" width="3" height="1"/>
+<rect fill="#1A6B3A" x="12" y="23" width="1" height="1"/>
+<rect fill="#1A6B3A" x="15" y="23" width="3" height="1"/>
+<rect fill="#1A6B3A" x="19" y="23" width="2" height="1"/>
+<rect fill="#1A6B3A" x="22" y="23" width="3" height="1"/>
+<rect fill="#1A6B3A" x="27" y="23" width="2" height="1"/>
+<rect fill="#1A6B3A" x="30" y="23" width="1" height="1"/>
+<rect fill="#1A6B3A" x="9" y="24" width="1" height="1"/>
+<rect fill="#1A6B3A" x="11" y="24" width="2" height="1"/>
+<rect fill="#1A6B3A" x="14" y="24" width="2" height="1"/>
+<rect fill="#1A6B3A" x="17" y="24" width="3" height="1"/>
+<rect fill="#1A6B3A" x="21" y="24" width="2" height="1"/>
+<rect fill="#1A6B3A" x="24" y="24" width="1" height="1"/>
+<rect fill="#1A6B3A" x="26" y="24" width="3" height="1"/>
+<rect fill="#1A6B3A" x="30" y="24" width="1" height="1"/>
+<!-- Format info indicator -->
+<rect fill="#1A6B3A" x="15" y="6" width="1" height="1"/>
+<rect fill="#1A6B3A" x="16" y="7" width="1" height="1"/>
+<rect fill="#1A6B3A" x="18" y="7" width="1" height="1"/>
+<rect fill="#1A6B3A" x="20" y="7" width="1" height="1"/>
+<rect fill="#1A6B3A" x="22" y="7" width="1" height="1"/>
+<rect fill="#1A6B3A" x="7" y="15" width="1" height="1"/>
+<rect fill="#1A6B3A" x="7" y="17" width="1" height="1"/>
+<rect fill="#1A6B3A" x="7" y="19" width="1" height="1"/>
+<rect fill="#1A6B3A" x="7" y="21" width="1" height="1"/>
+<rect fill="#1A6B3A" x="7" y="23" width="1" height="1"/>
+</svg>
 <div class="qr-panel-label"><span class="or">QR SCAN କରନ୍ତୁ</span><span class="en">Scan to WhatsApp</span></div>
 <div class="qr-panel-label" style="font-size:0.68rem;opacity:0.6;text-transform:none;font-weight:400">+91 88958 04898</div>
 <div class="qr-panel-label" style="font-size:0.65rem;opacity:0.55;text-transform:none;font-weight:300;letter-spacing:0"><span class="or">Camera ଖୋଲି Scan କଲେ<br/>ସିଧା WhatsApp ଖୋଲିବ</span><span class="en">Open camera &amp; scan</span></div>
