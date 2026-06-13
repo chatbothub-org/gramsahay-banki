@@ -92,14 +92,18 @@ nav {
 }
 .nav-logo { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:900; color:var(--green-deep); text-decoration:none; display:flex; align-items:center; gap:9px; }
 .nav-logo .gs-icon { width:38px;height:38px;border-radius:10px; background:linear-gradient(135deg,var(--saffron),var(--green)); display:flex;align-items:center;justify-content:center; font-size:19px; }
-.nav-logo em { font-style:normal; color:var(--saffron); }
+.nav-logo em { font-style:normal; color:var(--saffron); margin-left:6px; }
+.nav-logo-text { display:inline-flex; align-items:baseline; gap:4px; white-space:nowrap; }
 .nav-wa-btn {
   background:#25D366; color:white; padding:9px 20px; border-radius:50px;
   font-size:13.5px; font-weight:700; text-decoration:none;
-  display:inline-flex; align-items:center; gap:7px;
+  display:inline-flex; align-items:center; gap:8px; margin-left:18px;
   box-shadow:0 4px 14px rgba(37,211,102,0.35); transition:all .2s;
 }
 .nav-wa-btn:hover { background:#1ebe5a; transform:translateY(-1px); }
+.nav-actions { display:flex; align-items:center; gap:14px; margin-left:20px; }
+.nav-privacy-link { color:var(--green-deep); text-decoration:none; font-size:13px; font-weight:700; white-space:nowrap; opacity:.85; }
+.nav-privacy-link:hover { opacity:1; color:var(--saffron); }
 
 /* ── HERO ── */
 .hero {
@@ -871,6 +875,15 @@ footer { padding:3.2rem 2rem 1.6rem; background:var(--dark); color:rgba(255,255,
   }
 }
 
+@media (max-width: 640px) {
+  nav { gap:10px; padding:0.85rem 1rem; }
+  .nav-logo { font-size:1.28rem; gap:7px; }
+  .nav-logo em { margin-left:5px; }
+  .nav-actions { gap:8px; margin-left:8px; }
+  .nav-wa-btn { margin-left:0; padding:8px 13px; font-size:12px; }
+  .nav-privacy-link { display:none; }
+}
+
 </style>
 </head>
 <body>
@@ -886,11 +899,14 @@ footer { padding:3.2rem 2rem 1.6rem; background:var(--dark); color:rgba(255,255,
 <!-- NAV -->
 <nav>
 <a class="nav-logo" href="index.html">
-<span class="gs-icon">🌾</span> GramSahay <em>Banki</em>
+<span class="gs-icon">🌾</span> <span class="nav-logo-text">GramSahay <em>Banki</em></span>
 </a>
+<div class="nav-actions">
+<a class="nav-privacy-link" href="privacy.html">Privacy Policy</a>
 <a class="nav-wa-btn" href="https://wa.me/918895804898?text=Hi" target="_blank">
     💬 <span class="or">WhatsApp ରେ ଯୋଗ ଦିଅନ୍ତୁ</span><span class="en">Join on WhatsApp</span>
 </a>
+</div>
 </nav>
 <!-- HERO -->
 <section class="hero">
@@ -1523,6 +1539,7 @@ footer { padding:3.2rem 2rem 1.6rem; background:var(--dark); color:rgba(255,255,
 <li><a href="index.html"><span class="or">ମୁଖ୍ୟ ସାଇଟ</span><span class="en">Main Site</span></a></li>
 <li><a href="https://gramsahay.in">gramsahay.in</a></li>
 <li><a href="https://wa.me/918895804898" target="_blank">WhatsApp: +91 88958 04898</a></li>
+<li><a href="privacy.html">Privacy Policy</a></li>
 </ul>
 </div>
 <div class="footer-col">
